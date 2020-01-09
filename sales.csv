@@ -1,0 +1,12 @@
+1, 1, Rabbit, 2002-04-11, BEGIN
+1, 2, Tortoise, 2002-05-11, BEGIN
+2, 3, Tortoise, 2002-05-11, BEGIN
+3, 4, Tortoise, 2002-05-11, BEGIN
+1, 5, Rabbit, 2002-04-12, BEGIN
+1, 6, Tortoise, 2002-05-12, BEGIN
+2, 7, Tortoise, 2002-05-12, BEGIN
+3, 8, Tortoise, 2002-05-12, BEGIN
+1, 9, Rabbit, 2002-04-13, BEGIN
+1, 10, Tortoise, 2002-05-13, BEGIN
+2, 11, Tortoise, 2002-05-13, BEGIN
+3, 12, Tortoise, 2002-05-13, BEGIN
