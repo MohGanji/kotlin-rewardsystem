@@ -21,7 +21,7 @@ class Contract(id: Long, date: Date, type: ContractType) {
     }
 
     fun validFor(year: Int, quarter: Int): Boolean {
-        return !expired(year, quarter) && year >= this.startDate.year && quarter >= this.startDate.quarter
+        return !expired(year, quarter) && year >= this.startDate.year && quarter == this.startDate.quarter
     }
 }
 

@@ -34,8 +34,11 @@ open class Partner(id: Long) {
         val level = getLevelFor(year, quarter)
         var overall: Long = 0
         contracts.forEach {
+            if(it.validFor(year, quarter)) {
+                overall += level.rewardPerContract()
+            }
             if(it.startDate.year == year && it.startDate.quarter == quarter) {
-                overall += level.rewardPerContract() + it.type.bonusReward()
+                overall += it.type.bonusReward()
             }
         }
         subPartners.forEach {

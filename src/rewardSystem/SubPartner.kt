@@ -6,7 +6,7 @@ class SubPartner(id: Long, parent: Partner) : Partner(id) {
     fun getRewardDifference(level: PartnerLevel, year: Int, quarter: Int): Long {
         var overall: Long = 0
         val validContracts =
-            contracts.filter { !it.expired(year, quarter) && it.startDate.year == year && it.startDate.quarter == quarter }.size
+            contracts.filter { it.validFor(year, quarter) }.size
         overall += validContracts * (level.rewardPerContract() - this.getLevelFor(year, quarter).rewardPerContract())
         this.subPartners.forEach {
             overall += it.getRewardDifference(level, year, quarter)
